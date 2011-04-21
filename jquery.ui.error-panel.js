@@ -10,14 +10,14 @@
 
 
 (function ( $, undefined ) {
-	var widgetClasses = 'ui-error-panel ui-widget ui-corner-all';
-	var listClasses = 'ui-error-panel-list';
+	var widgetClasses = 'ui-error-panel ui-widget ui-corner-all ui-helper-reset';
+	var listClasses = 'ui-error-panel-list ui-helper-reset';
 	var errorClasses = 'ui-widget-content ui-state-error';
 	var noticeClasses = 'ui-widget-content ui-state-highlight';
 	var itemClasses = {
-		ok: 'ui-error-panel-ok',
-		error: 'ui-error-panel-error',
-		info: 'ui-error-panel-info'
+		ok: 'ui-error-panel-ok ui-helper-clearfix',
+		error: 'ui-error-panel-error ui-helper-clearfix',
+		info: 'ui-error-panel-info ui-helper-clearfix'
 	};
 	var iconClasses = {
 		ok: 'ui-icon ui-icon-check',
@@ -49,7 +49,7 @@
 				self.element.addClass(errorClasses);
 			}
 
-			self.listUl = $('<ul></ul>').addClass(listClasses).css('margin', '0.2em');
+			self.listUl = $('<ul></ul>').addClass(listClasses)
 			self.element.append(self.listUl);
 
 			self.errors = {};
