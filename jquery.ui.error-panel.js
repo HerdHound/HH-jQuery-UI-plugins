@@ -49,7 +49,7 @@
 				self.element.addClass(errorClasses);
 			}
 
-			self.listUl = $('<ul></ul>').addClass(listClasses)
+			self.listUl = $('<ul>').addClass(listClasses).css('padding', '0.5em');
 			self.element.append(self.listUl);
 
 			self.errors = {};
