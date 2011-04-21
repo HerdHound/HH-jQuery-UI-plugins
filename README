@@ -6,4 +6,4 @@ This is a collection of jQuery UI plugins used on herdhound.com
 The collection currently includes:
 
 * jQuery UI Error Panel v1.0
-
+* jQuery UI Content Panel v1.0 (requires Error Panel)
