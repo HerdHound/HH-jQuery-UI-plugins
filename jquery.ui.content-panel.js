@@ -34,7 +34,7 @@
 			errorsType: 'error',
 			defaultErrorText: '',
 			defaulterrorIcon: '',
-			errorAnimate: ''
+			errorShow: ''
 		},
 
 		_create: function() {
@@ -69,7 +69,7 @@
 					type: self.options.errorsType,
 					defaultErrorText: self.options.defaultErrorText,
 					defaulterrorIcon: self.options.defaulterrorIcon,
-					animate: self.options.errorAnimate
+					show: self.options.errorShow
 				});
 				self.errorPanel.css({
 					'margin-bottom': '1em'

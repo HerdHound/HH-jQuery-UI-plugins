@@ -30,7 +30,7 @@
 			type: 'error', // can be 'error' or 'notice'
 			defaultText: '',
 			defaultIcon: '', // can be 'info', 'error', or 'ok'
-			animate: '', // jQuery UI effect class
+			show: '', // jQuery UI effect class
 			hidden: true
 		},
 
