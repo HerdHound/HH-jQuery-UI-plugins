@@ -52,11 +52,11 @@
 			self.listUl = $('<ul>').addClass(listClasses).css('padding', '0.5em');
 			self.element.append(self.listUl);
 
-            self.errors = {};
+			self.errors = {};
 
-            if (opts.defaultText) {
-                self._addItem(opts.defaultText, opts.defaultIcon);
-            }
+			if (opts.defaultText) {
+				self._addItem(opts.defaultText, opts.defaultIcon);
+			}
 
 			self._refreshList();
 		},
@@ -79,7 +79,7 @@
 			this.listUl.empty();
 
 			if (this.errors) {
-                for (e in this.errors) {
+				for (e in this.errors) {
 					errorLi = this._renderLi(itemClasses[this.errors[e]], e);
 					this.listUl.append(errorLi);
 				}
@@ -91,15 +91,15 @@
 			}
 		},
 
-        _refreshList: function() {
-            var self = this;
-            self.element.hide(this.options.show, {}, 'fast', function() {
-                self._updateList();
-                if (self.listUl.html()) {
-                    self.show();
-                }
-            });
-        },
+		_refreshList: function() {
+			var self = this;
+			self.element.hide(this.options.show, {}, 'fast', function() {
+				self._updateList();
+				if (self.listUl.html()) {
+					self.show();
+				}
+			});
+		},
 
 		_renderIcon: function(type) {
 			return $('<span>').addClass(iconClasses[type]).css({'float': 'left', 'margin-right': '0.3em'});
@@ -143,8 +143,8 @@
 			this._refreshList();
 		},
 
-        show: function() {
-            this.element.show(this.options.show);
+		show: function() {
+			this.element.show(this.options.show);
 		},
 
 		hide: function() {
