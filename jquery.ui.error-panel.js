@@ -145,11 +145,11 @@
 		},
 
 		show: function() {
-			this.element.show(this.options.animate);
+			this.element.show(this.options.show);
 		},
 
 		hide: function() {
-			this.element.hide(this.options.animate);
+			this.element.hide(this.options.show);
 		}
 
 	});
