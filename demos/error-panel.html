@@ -1,0 +1,50 @@
+<html>
+  <head>
+    <title>jQuery UI Error Panel demo</title>
+    <link rel="stylesheet" type="text/css" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.7.0/themes/base/jquery-ui.css">
+    <style type="text/css">
+      .content {
+        background: #FDFFDD;
+        height: 200px;
+        padding: 1em;
+        border: 1px solid black;
+      }
+      .error {
+        margin-bottom: 1em;   
+      }
+    </style>
+  </head>
+  <body>
+    <div class="content">
+      <div class="error">
+      </div>
+      <button class="wrong">Click here to do something wrong</button>
+      <button class="clear">Clear erorrs</button>
+      <button class="remove">Remove only wrongness</button>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.5.2/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.11/jquery-ui.min.js"></script>
+    <script src="../jquery.ui.error-panel.js"></script>
+    <script type="text/javascript">
+      $(document).ready(function() {
+        var wrongError = 'That was soooo wrong!';
+        $('.error').errorPanel({
+          type: 'notice',
+          defaultText: 'Click on the button to initiate wrongness',
+          defaultIcon: 'info',
+          show: 'blind'
+        });
+        $('.wrong').click(function() {
+          $('.error').errorPanel('addError', wrongError, 'error');
+        });
+        $('.clear').click(function() {
+          $('.error').errorPanel('clearErrors');
+        });
+        $('.remove').click(function() {
+          $('.error').errorPanel('removeError', wrongError);
+        });
+      });
+    </script>
+  </body>
+</html>
+
