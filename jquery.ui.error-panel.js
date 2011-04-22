@@ -91,18 +91,17 @@
 			}
 		},
 
-		_refreshList: function() {
-			this.hide();
-			this._updateList();
-			if (this.listUl.html()) {
-				this.show();
-			} else {
-				this.hide();
-			}
+        _refreshList: function() {
+            var self = this;
+            self.element.hide(self.options.show, function() {
+                self._updateList();
+                if (self.listUl.html()) {
+                    self.show();
+                }
+            });
 		},
 
 		_renderIcon: function(type) {
-			type = type in itemClasses ? type : 'error';
 			return $('<span>').addClass(iconClasses[type]).css({'float': 'left', 'margin-right': '0.3em'});
 		},
 
