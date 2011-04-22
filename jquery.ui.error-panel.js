@@ -93,12 +93,20 @@
 
 		_refreshList: function() {
 			var self = this;
-			self.element.hide(this.options.show, {}, 'fast', function() {
+			if (self.options.show !== '') {
+				self.element.hide(self.options.show, {}, 'fast', function() {
+					self._updateList();
+					if (self.listUl.html()) {
+						self.show();
+					}
+				});
+			} else {
+				self.hide();
 				self._updateList();
 				if (self.listUl.html()) {
 					self.show();
 				}
-			});
+			}
 		},
 
 		_renderIcon: function(type) {
