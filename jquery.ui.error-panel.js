@@ -52,7 +52,11 @@
 			self.listUl = $('<ul>').addClass(listClasses).css('padding', '0.5em');
 			self.element.append(self.listUl);
 
-			self.errors = {};
+            self.errors = {};
+
+            if (opts.defaultText) {
+                self._addItem(opts.defaultText, opts.defaultIcon);
+            }
 
 			self._refreshList();
 		},
